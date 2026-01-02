@@ -34,9 +34,9 @@ pub fn d4p2() -> String {
     let mut input = read_input();
     let mut total: u128 = 0;
     let mut to_remove: Vec<(usize, usize)> = vec![];
-    while true {
+    loop {
         let mut neighbors: [i8; 8] = [0; 8];
-        let mut point: (usize, usize) = (0, 0);
+        let mut point: (usize, usize);
         for y in 0..input.len() {
             for x in 0..input[y].len() {
                 if input[y][x] != '@' {
